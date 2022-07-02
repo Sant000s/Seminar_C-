@@ -57,7 +57,7 @@ else
 }*/
 
 
-/*Денис: Задача 42: Напишите программу, которая будет преобразовывать
+/*Задача 42: Напишите программу, которая будет преобразовывать
 десятичное число в двоичное.
 45 -> 101101
 3 -> 11
@@ -101,6 +101,8 @@ else
     }
     PrintArray(arr);
 
+    // Метод
+
     void PrintArray(int[] array)
     {
         string print = "[";
@@ -128,7 +130,7 @@ int Input(string str)
 заданного массива с помощью поэлементного копирования.*/
 
 
-/*int[] arr = { 3, 2, 7, 9, -3, 0, 1 };
+int[] arr = { 3, 2, 7, 9, -3, 0, 1 };
 int[] cloneArr = new int[arr.Length];
 PrintArray(arr);
 for (int i = 0; i < arr.Length; i++)
@@ -137,9 +139,7 @@ for (int i = 0; i < arr.Length; i++)
 }
 PrintArray(cloneArr);
 
-
-//Методы
-
+// Метод
 void PrintArray(int[] array)
 {
     string print = "[";
@@ -153,4 +153,4 @@ void PrintArray(int[] array)
         print += array[i] + ", ";
     }
     Console.Write(print + "]\n");
-}*/
+}
