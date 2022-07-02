@@ -7,16 +7,13 @@
 
 
 /*Console.Clear();
-
-int[] array = new int[5];
+Console.Write("Введите размер массива: ");
+int sizeArray = Convert.ToInt32(Console.ReadLine());
+int[] array = new int[sizeArray];
 int count = 0;
 int sum = 0;
 
-for (int i = 0; i < array.Length; i++)
-{
-    array[i] = new Random().Next(100, 1000);
-    Console.Write(array[i] + " ");
-}
+CreateArray(array);
 
 for (int i = 0; i < array.Length; i++)
 {
@@ -27,8 +24,17 @@ for (int i = 0; i < array.Length; i++)
     }
 }
 Console.WriteLine();
-Console.WriteLine("Колличество четных чисел в массиве: " + sum);*/
+Console.WriteLine("Колличество четных чисел в массиве: " + sum);
 
+
+void CreateArray(int[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        array[i] = new Random().Next(100, 1000);
+        Console.Write(array[i] + " ");
+    }
+}*/
 
 /*Задача 36: Задайте одномерный массив, заполненный случайными числами.
 Найдите сумму элементов, стоящих на нечётных позициях.
@@ -37,24 +43,29 @@ Console.WriteLine("Колличество четных чисел в масси�
 
 
 /*Console.Clear();
-int[] array = new int[7];
+Console.Write("Введите размер массива: ");
+int sizeArray = Convert.ToInt32(Console.ReadLine());
+int[] array = new int[sizeArray];
 int sum = 0;
 
-Console.Write("Одномерный массив случайных чисел: ");
-for (int i = 0; i < array.Length; i++)
-{
-    array[i] = new Random().Next(99);
-    Console.Write(array[i] + " ");
-}
+CreateArray(array);
 
 for (int i = 0; i < array.Length; i += 2)
 {
     sum += array[i];
 }
 Console.WriteLine();
-Console.WriteLine($"Сумма элементов, стоящих на нечётных позициях равна: {sum}");*/
+Console.WriteLine($"Сумма элементов, стоящих на нечётных позициях: {sum}");
 
 
+void CreateArray(int[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        array[i] = new Random().Next(100);
+        Console.Write(array[i] + " ");
+    }
+}*/
 
 /*Задача 38: Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементом массива.
 [3 7 22 2 78] -> 76*/
