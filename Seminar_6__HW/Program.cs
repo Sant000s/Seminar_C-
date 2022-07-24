@@ -29,16 +29,14 @@ int[] StringToArr(string input)
 
         while (input[i] != ',')
         {
-            if (i != input.Length - 1)
+            tempString += input[i].ToString();
+
+            if (i == input.Length - 1)
             {
-                tempString += input[i].ToString();
-                i++;
-            }
-            else
-            {
-                tempString += input[i].ToString();
                 break;
             }
+
+            i++;
         }
 
         array[index] = Convert.ToInt32(tempString);
@@ -68,15 +66,17 @@ Console.Write($"Количество чисел больше нуля равно
 
 //Задача 43. Напишите программу, которая найдёт точку пересечения двух прямых,
 // заданных уравнениями 
+
 // y = k1 * x + b1, y = k2 * x + b2; значения b1, k1, b2 и k2 задаются пользователем.
 
+// К примеру,
 //b1 = 2, k1 = 5, b2 = 4, k2 = 9 -> (-0,5; 5,5)
 
 
 // ПРИРАВНИВАЕМ ОБА ЗНАЧЕНИЯ Y: k1x + b1 = k2x + b2
 // ГРУППИРУЕМ: k1x - k2x = b2 - b1
 // НАХОДИМ Х: x = (b2 - b1) / (k1 - k2)
-// ДАЛЕЕ ПОДСТАВЛЯЕМ В ФОРМУЛУ
+// ДАЛЕЕ ПОДСТАВЛЯЕМ В ФОРМУЛУ КОДА
 
 
 Console.Clear();
